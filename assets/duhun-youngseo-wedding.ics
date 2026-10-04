@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Duhun and Youngseo//Wedding Invitation//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:duhun-youngseo-20270110@wedding-invitation.local
+DTSTAMP:20261004T000000Z
+DTSTART:20270110T040000Z
+SUMMARY:황두훈 · 이영서 결혼식
+LOCATION:서울대학교 호암교수회관 베리타스홀
+DESCRIPTION:2027년 1월 10일 일요일 오후 1시\n서울특별시 관
+ 악구 봉천동 239-1\n무료 주차 / 낙성대 방향으로 진입해 
+ 주세요.
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

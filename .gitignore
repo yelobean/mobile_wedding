@@ -1,0 +1,8 @@
+.DS_Store
+/previews/
+/*.zip
+/*.png
+/assets/*-edit.md
+/.vercel/
+.env
+.env.*

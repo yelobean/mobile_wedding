@@ -1,0 +1,194 @@
+:root {
+  --paper: #f8f5ee;
+  --paper-deep: #f1ede3;
+  --ink: #393d36;
+  --muted: #767567;
+  --gold: #9d875e;
+  --line: #d9d1c1;
+  --serif: 'Gowun Batang', 'Batang', serif;
+  --english: 'Cormorant Garamond', 'Times New Roman', serif;
+  --sans: 'Noto Sans KR', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #e6e2da; color: var(--ink); font-family: var(--sans); font-weight: 400; -webkit-font-smoothing: antialiased; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+button, a, summary { touch-action: manipulation; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+p, h1, h2, h3, figure { margin: 0; }
+button svg, a svg, .travel-icon svg { width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.15; stroke-linecap: round; stroke-linejoin: round; }
+
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 20; padding: 12px 20px; background: var(--ink); color: var(--paper); font-size: 13px; }
+.skip-link:focus { top: 16px; }
+.invitation { position: relative; width: 100%; max-width: 480px; margin: 0 auto; overflow: clip; background: var(--paper); box-shadow: 0 14px 65px rgb(44 44 35 / 9%); }
+.invitation::after { position: absolute; z-index: 5; inset: 0; background-image: url('assets/paper-texture.svg'); opacity: .055; mix-blend-mode: multiply; pointer-events: none; content: ''; }
+.section { position: relative; padding: 80px 34px; text-align: center; }
+.eyebrow { color: var(--gold); font-family: var(--sans); font-size: 10px; font-weight: 500; line-height: 1.5; letter-spacing: .24em; text-transform: uppercase; }
+.section-title { margin: 15px 0 0; font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.6; letter-spacing: -.05em; }
+
+/* A restrained, printed cover with the couple's original drawings. */
+.hero { position: relative; display: flex; min-height: 752px; padding: 52px 30px 39px; flex-direction: column; align-items: center; text-align: center; background: var(--paper); }
+.hero-frame { position: absolute; inset: 22px; border: 1px solid rgb(157 135 94 / 36%); pointer-events: none; }
+.hero-frame::after { position: absolute; inset: 5px; border: 1px solid rgb(157 135 94 / 13%); content: ''; }
+.hero-eyebrow { font-size: 9px; letter-spacing: .28em; }
+.hero-doodle { position: absolute; pointer-events: none; opacity: .76; filter: sepia(.5); mix-blend-mode: multiply; }
+.hero-doodle.groom { top: 104px; left: 39px; width: 69px; transform: rotate(-12deg); }
+.hero-doodle.bride { top: 128px; right: 37px; width: 62px; transform: rotate(11deg); }
+.hero-center { width: 100%; margin-top: 131px; }
+.hero-script { color: var(--muted); font-family: var(--english); font-size: 18px; font-style: italic; letter-spacing: .005em; }
+.names { margin-top: 26px; color: #363c33; font-family: var(--english); font-size: clamp(46px, 14vw, 65px); font-weight: 500; line-height: 1.02; letter-spacing: .025em; }
+.names > span { display: block; white-space: nowrap; }
+.names .ampersand { margin: 4px 0 7px; color: var(--gold); font-size: 37px; font-weight: 400; font-style: italic; line-height: 1; }
+.korean-names { display: flex; justify-content: center; align-items: center; gap: 17px; margin-top: 28px; font-family: var(--serif); font-size: 14px; letter-spacing: .15em; }
+.name-dot { color: var(--gold); font-size: 10px; }
+.fine-rule { display: block; width: 31px; height: 1px; margin: 26px auto 24px; background: var(--gold); opacity: .65; }
+.hero-date { font-family: var(--english); font-size: 21px; font-weight: 500; letter-spacing: .06em; }
+.hero-date span { display: block; margin-top: 6px; color: var(--muted); font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: .15em; }
+.hero-venue { margin-top: 22px; font-family: var(--serif); font-size: 14px; line-height: 1.95; letter-spacing: -.035em; }
+.hero-venue span { color: var(--muted); font-size: 13px; }
+.scroll-cue { position: relative; display: flex; width: 180px; min-height: 47px; margin-top: auto; padding-top: 22px; align-items: center; flex-direction: column; gap: 12px; color: var(--gold); font-size: 8px; letter-spacing: .23em; }
+.scroll-cue svg { width: 14px; height: 23px; stroke-width: .8; }
+
+.intro { background: var(--paper-deep); padding-top: 86px; padding-bottom: 79px; }
+.ornament { display: flex; margin: 24px auto; align-items: center; justify-content: center; gap: 13px; color: var(--gold); font-family: var(--english); font-size: 19px; }
+.ornament span { width: 25px; height: 1px; background: var(--line); }
+.intro h2 { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.85; letter-spacing: -.06em; }
+.invitation-copy { margin-top: 29px; color: #66665b; font-family: var(--serif); font-size: 14px; line-height: 2.1; letter-spacing: -.045em; word-break: keep-all; }
+.invitation-copy p + p { margin-top: 24px; }
+.couple-names { display: flex; margin-top: 38px; align-items: center; justify-content: center; gap: 19px; font-family: var(--serif); font-size: 16px; }
+.couple-names p { display: flex; gap: 10px; align-items: baseline; }
+.couple-names small { color: var(--muted); font-family: var(--sans); font-size: 10px; }
+.couple-names > span { color: var(--gold); font-family: var(--english); font-size: 21px; font-style: italic; }
+.handwritten { margin-top: 23px; color: var(--gold); font-family: var(--english); font-size: 18px; font-style: italic; }
+
+.calendar { padding-top: 77px; padding-bottom: 71px; }
+.calendar::after { position: absolute; right: 34px; bottom: 0; left: 34px; height: 1px; background: var(--line); content: ''; }
+.event-date { margin-top: 22px; font-family: var(--serif); font-size: 14px; line-height: 1.9; }
+.event-date span { display: block; color: var(--muted); font-size: 13px; }
+.month-heading { display: flex; margin-top: 37px; align-items: baseline; justify-content: center; gap: 9px; font-family: var(--english); }
+.month { font-size: 30px; font-style: italic; }
+.year { color: var(--gold); font-size: 15px; letter-spacing: .05em; }
+.calendar-table { width: 100%; max-width: 340px; margin: 20px auto 0; border-collapse: collapse; table-layout: fixed; font-family: var(--english); font-size: 18px; font-variant-numeric: lining-nums; }
+.calendar-table th { height: 36px; color: var(--muted); font-family: var(--sans); font-size: 11px; font-weight: 400; }
+.calendar-table td { position: relative; height: 43px; font-weight: 500; }
+.calendar-table .sun { color: #a57d6f; }
+.calendar-table .wedding-date { color: var(--paper); }
+.wedding-date span { position: relative; display: inline-flex; width: 33px; height: 33px; border-radius: 50%; align-items: center; justify-content: center; background: #7b826c; }
+.wedding-date span::after { position: absolute; inset: -3px; border: 1px solid rgb(157 135 94 / 44%); border-radius: 50%; content: ''; }
+.calendar-message { margin-top: 24px; color: var(--muted); font-family: var(--serif); font-size: 13px; }
+.calendar-message strong { margin-left: 6px; color: var(--gold); font-family: var(--english); font-size: 21px; font-weight: 500; letter-spacing: .035em; }
+.text-action { display: inline-flex; min-height: 44px; margin-top: 19px; padding: 0 5px; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 11px; }
+.text-action svg { width: 17px; height: 17px; }
+
+.location { padding-top: 75px; padding-bottom: 70px; }
+.venue-name { margin-top: 31px; font-family: var(--serif); font-size: 18px; line-height: 1.6; letter-spacing: -.055em; }
+.venue-hall { margin-top: 6px; font-family: var(--serif); font-size: 14px; }
+.address-line { display: flex; margin: 7px 0 0; align-items: center; justify-content: center; gap: 2px; }
+.address-line address { color: var(--muted); font-size: 12px; font-style: normal; letter-spacing: -.03em; }
+.address-copy { display: inline-flex; width: 44px; height: 44px; padding: 0; border: 0; align-items: center; justify-content: center; background: transparent; color: var(--muted); }
+.address-copy svg { width: 14px; height: 14px; }
+.venue-card { display: flex; margin-top: 14px; padding: 20px 17px 19px; border: 1px solid var(--line); align-items: center; flex-direction: column; background: #f3f0e7; transition: border-color .2s; cursor: pointer; list-style: none; }
+.venue-card::-webkit-details-marker { display: none; }
+.venue-route-map { width: 100%; height: auto; mix-blend-mode: multiply; }
+.venue-card-action { display: inline-flex; margin-top: 16px; gap: 13px; align-items: baseline; color: var(--muted); font-size: 11px; }
+.venue-card-action .map-toggle { color: var(--gold); font-size: 16px; transition: transform .2s; }
+.map-close-text { display: none; }
+.venue-map[open] .map-open-text { display: none; }
+.venue-map[open] .map-close-text { display: inline; }
+.venue-map[open] .map-toggle { transform: rotate(45deg); }
+.map-frame { height: 245px; border: 1px solid var(--line); border-top: 0; overflow: hidden; background: #eae7df; }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; filter: saturate(.45); }
+.map-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 10px; }
+.map-actions a { display: flex; min-height: 48px; border: 1px solid var(--line); align-items: center; justify-content: center; gap: 18px; font-size: 12px; transition: background-color .2s; }
+.map-actions a > span { color: var(--gold); }
+.travel-info { margin-top: 31px; text-align: left; }
+.travel-row { display: flex; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: flex-start; gap: 15px; }
+.travel-row:first-child { padding-top: 8px; }
+.travel-row:last-child { padding-bottom: 25px; }
+.travel-icon { display: inline-flex; margin-top: 2px; color: var(--gold); }
+.travel-icon svg { width: 22px; height: 22px; }
+.travel-row h3 { font-family: var(--serif); font-size: 15px; font-weight: 700; }
+.travel-row p { margin-top: 9px; color: var(--muted); font-size: 12px; line-height: 1.95; letter-spacing: -.04em; word-break: keep-all; }
+.travel-row strong { color: #565b4f; font-weight: 500; }
+.parking-notice { margin-top: 27px; padding: 22px 15px; border-left: 2px solid #b09b74; text-align: left; background: var(--paper-deep); }
+.notice-label { color: var(--gold); font-size: 8px; font-weight: 500; letter-spacing: .16em; }
+.parking-notice p { margin-top: 9px; font-family: var(--serif); font-size: 15px; line-height: 1.6; letter-spacing: -.04em; }
+.parking-notice strong { color: #736248; font-weight: 700; }
+.parking-notice > span:last-child { display: block; margin-top: 9px; color: var(--muted); font-size: 11px; line-height: 1.9; letter-spacing: -.03em; word-break: keep-all; }
+.venue-phone { display: flex; min-height: 44px; margin-top: 20px; align-items: center; justify-content: center; gap: 9px; color: var(--muted); font-size: 11px; }
+.venue-phone span { font-size: 12px; letter-spacing: .02em; }
+.venue-phone svg { width: 14px; height: 14px; }
+.official-directions { display: inline-flex; min-height: 44px; padding: 0 5px; gap: 8px; align-items: center; color: var(--muted); font-size: 10px; }
+
+.gift { padding-top: 74px; padding-bottom: 79px; background: var(--paper-deep); }
+.gift-copy { margin-top: 24px; color: var(--muted); font-family: var(--serif); font-size: 14px; line-height: 2; letter-spacing: -.035em; }
+.account-preview-note { margin-top: 22px; color: var(--gold); font-size: 10px; line-height: 1.9; word-break: keep-all; }
+.account-accordion { margin-top: 32px; border-top: 1px solid #b8af9c; text-align: left; }
+.account-group { border-bottom: 1px solid #cfc6b5; }
+.account-group summary { display: flex; min-height: 86px; padding: 16px 3px; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; list-style: none; }
+.account-group summary::-webkit-details-marker { display: none; }
+.account-side { display: block; font-family: var(--serif); font-size: 16px; }
+.account-side small { display: block; margin-bottom: 6px; color: var(--gold); font-family: var(--english); font-size: 10px; font-weight: 500; letter-spacing: .16em; }
+.account-side > span { margin-left: 9px; color: var(--muted); font-family: var(--sans); font-size: 11px; }
+.account-arrow { position: relative; width: 15px; height: 15px; margin-right: 6px; color: var(--gold); transition: transform .25s; }
+.account-arrow::before, .account-arrow::after { position: absolute; top: 7px; left: 0; width: 15px; height: 1px; background: currentColor; content: ''; }
+.account-arrow::after { transform: rotate(90deg); }
+.account-group[open] .account-arrow { transform: rotate(45deg); }
+.account-list { display: grid; gap: 1px; padding-bottom: 19px; }
+.account-row { display: flex; min-height: 81px; padding: 17px 15px; align-items: center; justify-content: space-between; gap: 8px; background: rgb(255 255 255 / 42%); }
+.account-row > div { min-width: 0; }
+.account-person { color: var(--muted); font-size: 11px; }
+.account-person strong { margin-left: 8px; color: var(--ink); font-family: var(--serif); font-size: 14px; font-weight: 400; }
+.account-pending, .account-number { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.account-number { color: var(--ink); font-size: 12px; overflow-wrap: anywhere; }
+.account-example { margin-top: 5px; color: var(--gold); font-size: 10px; line-height: 1.6; }
+.copy-button { flex: 0 0 auto; min-width: 45px; min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--muted); font-size: 11px; }
+
+.closing { position: relative; min-height: 380px; padding: 62px 34px 49px; text-align: center; background: #ece6d9; }
+.closing-script { color: #847657; font-family: var(--english); font-size: 30px; font-style: italic; line-height: 1.15; }
+.closing-copy { margin-top: 25px; color: #69685b; font-family: var(--serif); font-size: 13px; line-height: 1.9; letter-spacing: -.04em; }
+.share-button { display: inline-flex; min-height: 44px; margin-top: 18px; padding: 8px 15px; border: 0; align-items: center; gap: 9px; background: transparent; color: #6e715f; font-size: 11px; }
+.share-button svg { width: 15px; height: 15px; }
+.closing-rule { display: block; width: 25px; height: 1px; margin: 20px auto 17px; background: #b8a787; }
+.closing small { display: block; color: #726954; font-family: var(--english); font-size: 13px; letter-spacing: .08em; }
+.closing small > span { display: block; margin-top: 5px; color: #8a826e; font-size: 10px; letter-spacing: .16em; }
+.couple-stamp { position: absolute; right: 19px; bottom: 16px; width: 75px; height: 75px; padding: 5px; border: 1px solid rgb(104 97 73 / 40%); border-radius: 50%; object-fit: contain; opacity: .52; mix-blend-mode: multiply; transform: rotate(9deg); }
+
+#toast { position: fixed; z-index: 30; bottom: max(24px, env(safe-area-inset-bottom)); left: 50%; width: max-content; max-width: calc(100vw - 40px); padding: 12px 20px; border-radius: 3px; background: rgb(55 60 49 / 94%); box-shadow: 0 4px 18px rgb(0 0 0 / 12%); color: #fffdf5; font-size: 12px; line-height: 1.6; text-align: center; opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%, 8px); transition: opacity .2s, transform .2s, visibility .2s; }
+#toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+@media (hover: hover) {
+  .map-actions a:hover, .copy-button:hover { background: #eae5d9; }
+  .venue-card:hover { border-color: var(--gold); }
+  .share-button:hover, .text-action:hover, .venue-phone:hover { color: var(--gold); }
+}
+@media (min-width: 481px) {
+  body { padding: 32px 0; }
+  .hero { min-height: 785px; padding-top: 57px; }
+  .hero-center { margin-top: 131px; }
+  .hero-doodle.groom { top: 112px; left: 52px; }
+  .hero-doodle.bride { top: 153px; right: 52px; }
+  .section { padding-right: 46px; padding-left: 46px; }
+}
+@media (max-width: 360px) {
+  .section { padding-right: 25px; padding-left: 25px; }
+  .hero { min-height: 713px; padding-right: 27px; padding-left: 27px; }
+  .hero-center { margin-top: 120px; }
+  .hero-doodle.groom { top: 97px; left: 33px; width: 60px; }
+  .hero-doodle.bride { top: 118px; right: 32px; width: 56px; }
+  .hero-script { font-size: 17px; }
+  .intro h2 { font-size: 20px; }
+  .invitation-copy { font-size: 12.5px; }
+  .couple-names { gap: 12px; font-size: 15px; }
+  .couple-names p { gap: 7px; }
+  .parking-notice > span:last-child br { display: none; }
+  .couple-stamp { right: 10px; width: 61px; height: 61px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
