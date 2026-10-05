@@ -1,15 +1,15 @@
 // bank: 은행명, number: 계좌번호, holder: 예금주 성함.
-// 실제 계좌는 isExample: false로 설정합니다. 계좌번호는 제공받은 숫자 그대로 보관합니다.
+// 실제 계좌는 isExample: false로 설정합니다. 번호는 은행별 표시 형식으로 보관하고 복사 시 숫자만 사용합니다.
 const invitationAccounts = {
   groom: [
-    { role: '신랑', holder: '황두훈', bank: '우리은행', number: '1002283900308', isExample: false },
-    { role: '신랑 아버지', holder: '황준형', bank: '우리은행', number: '1002849304752', isExample: false },
-    { role: '신랑 어머니', holder: '최영교', bank: '국민은행', number: '105210656193', isExample: false },
+    { role: '신랑', holder: '황두훈', bank: '우리은행', number: '1002-283-900308', isExample: false },
+    { role: '신랑 아버지', holder: '황준형', bank: '우리은행', number: '1002-849-304752', isExample: false },
+    { role: '신랑 어머니', holder: '최영교', bank: '국민은행', number: '105-21-0656-193', isExample: false },
   ],
   bride: [
-    { role: '신부', holder: '이영서', bank: '카카오뱅크', number: '3333166258140', isExample: false },
-    { role: '신부 아버지', holder: '이종욱', bank: '신한은행', number: '31504388612', isExample: false },
-    { role: '신부 어머니', holder: '심미정', bank: '신한은행', number: '110168407334', isExample: false },
+    { role: '신부', holder: '이영서', bank: '카카오뱅크', number: '3333-16-6258140', isExample: false },
+    { role: '신부 아버지', holder: '이종욱', bank: '신한은행', number: '315-04-388612', isExample: false },
+    { role: '신부 어머니', holder: '심미정', bank: '신한은행', number: '110-168-407334', isExample: false },
   ],
 };
 
@@ -93,7 +93,7 @@ const invitationAccounts = {
         copy.className = 'copy-button';
         copy.type = 'button';
         copy.textContent = '복사';
-        copy.dataset.copy = account.number;
+        copy.dataset.copy = account.number.replace(/\D/g, '');
         copy.dataset.copyMessage = account.isExample
           ? '예시 계좌번호를 복사했습니다. 실제 계좌로 교체해 주세요.'
           : `${account.holder}님의 계좌번호를 복사했습니다.`;
