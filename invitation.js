@@ -14,6 +14,9 @@ const invitationAccounts = {
 };
 
 (() => {
+  // 추가 청첩장은 계좌번호와 예금주 원문을 유지하며 표시 이름만 바꿀 수 있습니다.
+  const nameOverridesElement = document.querySelector('#account-name-overrides');
+  const accountNameOverrides = nameOverridesElement ? JSON.parse(nameOverridesElement.textContent) : {};
   const weddingDate = Date.UTC(2027, 0, 10);
   const dayInMilliseconds = 86400000;
   const toast = document.querySelector('#toast');
@@ -65,6 +68,7 @@ const invitationAccounts = {
     const list = document.querySelector(`#${side}-accounts`);
     list.replaceChildren();
     accounts.forEach((account) => {
+      const displayName = accountNameOverrides[account.holder] || account.holder;
       const row = document.createElement('div');
       row.className = 'account-row';
       const info = document.createElement('div');
@@ -73,7 +77,7 @@ const invitationAccounts = {
       person.textContent = account.role;
       if (account.holder) {
         const name = document.createElement('strong');
-        name.textContent = account.holder;
+        name.textContent = displayName;
         person.append(name);
       }
       const number = document.createElement('p');
@@ -96,8 +100,8 @@ const invitationAccounts = {
         copy.dataset.copy = account.number.replace(/\D/g, '');
         copy.dataset.copyMessage = account.isExample
           ? '예시 계좌번호를 복사했습니다. 실제 계좌로 교체해 주세요.'
-          : `${account.holder}님의 계좌번호를 복사했습니다.`;
-        copy.setAttribute('aria-label', `${account.role} ${account.holder} 계좌번호 복사`);
+          : `${displayName}님의 계좌번호를 복사했습니다.`;
+        copy.setAttribute('aria-label', `${account.role} ${displayName} 계좌번호 복사`);
         row.append(copy);
       }
       list.append(row);
