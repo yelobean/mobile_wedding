@@ -1,16 +1,15 @@
-// 현재는 디자인 확인용 예시입니다. 공개 전에 실제 계좌 정보로 교체해 주세요.
 // bank: 은행명, number: 계좌번호, holder: 예금주 성함.
-// 실제 정보로 바꾼 항목은 isExample을 false로 변경하면 예시 표시가 사라집니다.
+// 실제 계좌는 isExample: false로 설정합니다. 계좌번호는 제공받은 숫자 그대로 보관합니다.
 const invitationAccounts = {
   groom: [
-    { role: '신랑', holder: '황두훈', bank: 'KB국민은행', number: '000-00-000000', isExample: true },
-    { role: '신랑 아버지', holder: '아버지 성함', bank: '신한은행', number: '000-00-000000', isExample: true },
-    { role: '신랑 어머니', holder: '어머니 성함', bank: '우리은행', number: '000-00-000000', isExample: true },
+    { role: '신랑', holder: '황두훈', bank: '우리은행', number: '1002283900308', isExample: false },
+    { role: '신랑 아버지', holder: '황준형', bank: '우리은행', number: '1002849304752', isExample: false },
+    { role: '신랑 어머니', holder: '최영교', bank: '국민은행', number: '105210656193', isExample: false },
   ],
   bride: [
-    { role: '신부', holder: '이영서', bank: '하나은행', number: '000-00-000000', isExample: true },
-    { role: '신부 아버지', holder: '아버지 성함', bank: 'NH농협은행', number: '000-00-000000', isExample: true },
-    { role: '신부 어머니', holder: '어머니 성함', bank: '카카오뱅크', number: '000-00-000000', isExample: true },
+    { role: '신부', holder: '이영서', bank: '카카오뱅크', number: '3333166258140', isExample: false },
+    { role: '신부 아버지', holder: '이종욱', bank: '신한은행', number: '31504388612', isExample: false },
+    { role: '신부 어머니', holder: '심미정', bank: '신한은행', number: '110168407334', isExample: false },
   ],
 };
 
